@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #2d5480;
+  --secondary: #eee;
+  --tertiary: #c1bebe9e;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--tertiary);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+li {
+  list-style: none;
+}

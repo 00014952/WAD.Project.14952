@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="author">
+    <div class="col-md-8">
+      <div class="author-info">
+        <h3>{{ author.firstName + " " + author.lastName }}</h3>
+        <div class="author-birth-date">{{ author.birthDate }}</div>
+      </div>
+
+      <p>{{ author.biography }}</p>
+      <div class="author-books">
+        <h4>Books:</h4>
+        <ul *ngIf="!isNoBooks">
+          <li *ngFor="let book of authorBooks">
+            <a [routerLink]="'/books/' + book.id">{{ book.title }}</a>
+          </li>
+        </ul>
+        <p *ngIf="isNoBooks">No books</p>
+      </div>
+      <div class="author-buttons">
+        <button (click)="deleteAuthor(author.id)">Delete</button>
+        <a [routerLink]="'/edit-author/' + author.id">Edit</a>
+      </div>
+      <p *ngIf="error" class="error">{{ error }}</p>
+    </div>
+  </div>
+</div>

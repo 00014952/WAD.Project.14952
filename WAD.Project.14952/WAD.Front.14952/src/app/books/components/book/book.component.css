@@ -1,0 +1,82 @@
+.book {
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  max-width: 50rem;
+}
+
+.book-image {
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  height: 40rem;
+}
+
+.book img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.book-info {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.book-genre {
+  font-size: 1.2rem;
+  background-color: cadetblue;
+  color: var(--secondary);
+  padding: 0.5rem 2rem;
+  border-radius: 0.4rem;
+  font-weight: 500;
+}
+
+.book-quantity {
+  font-size: 1.2rem;
+  background-color: cornflowerblue;
+  color: var(--secondary);
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+
+.book h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.book p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.book-buttons {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.book-buttons span {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+a.book-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+}

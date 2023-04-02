@@ -1,0 +1,71 @@
+<div class="container">
+  <h1>Create Author</h1>
+  <form #authorForm="ngForm" (ngSubmit)="onSubmit(authorForm)">
+    <div class="form-group">
+      <label for="title">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        name="firstName"
+        required
+        [(ngModel)]="author.firstName"
+        #firstName="ngModel"
+        placeholder="Enter firstName"
+      />
+      <span class="error" *ngIf="!firstName.valid && firstName.touched">
+        FirstName is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        placeholder="Enter lastName"
+        required
+        name="lastName"
+        [(ngModel)]="author.lastName"
+        #lastName="ngModel"
+      />
+      <span class="error" *ngIf="!lastName.valid && lastName.touched">
+        Last Name is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="birthDate">Date Birth</label>
+      <input
+        type="date"
+        class="form-control"
+        id="birthDate"
+        placeholder="Enter birthDate"
+        name="birthDate"
+        required
+        [(ngModel)]="author.birthDate"
+        #birthDate="ngModel"
+      />
+      <span class="error" *ngIf="!birthDate.valid && birthDate.touched">
+        Date Birth is required
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="biography">Biography</label>
+      <textarea
+        class="form-control"
+        id="biography"
+        name="biography"
+        placeholder="Enter biography"
+        required
+        [(ngModel)]="author.biography"
+        #biography="ngModel"
+      ></textarea>
+      <span class="error" *ngIf="!biography.valid && biography.touched">
+        biography is required
+      </span>
+    </div>
+
+    <button type="submit" [disabled]="!authorForm.valid">Submit</button>
+  </form>
+</div>

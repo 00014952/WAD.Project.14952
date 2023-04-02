@@ -1,0 +1,16 @@
+<div class="authors container">
+  <h1>Authors</h1>
+  <a routerLink="/create-author">Create New Author</a>
+  <ul *ngIf="!isAuthorsEmpty">
+    <li *ngFor="let author of authors">
+      <h2>{{ author.firstName + " " + author.lastName }}</h2>
+      <p>{{ author.birthDate }}</p>
+      <p>{{ author.biography }}</p>
+      <a [routerLink]="'/authors/' + author.id">Details</a>
+    </li>
+  </ul>
+
+  <p *ngIf="isAuthorsEmpty" style="font-size: 2rem; text-align: center">
+    No authors
+  </p>
+</div>

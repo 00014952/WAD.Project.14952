@@ -1,0 +1,34 @@
+.header {
+  background-color: var(--primary);
+  padding: 1rem;
+  color: var(--secondary);
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header nav a {
+  color: var(--secondary);
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+
+.header nav a.active {
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  color: #ccc;
+  transform: scale(1.1);
+}

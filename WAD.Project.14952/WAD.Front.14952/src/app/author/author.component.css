@@ -1,0 +1,58 @@
+.container {
+  min-height: 100vh;
+}
+
+.author {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 50rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li a {
+  color: var(--primary);
+  font-size: 1.4rem;
+}
+
+p,
+.author-birth-date {
+  font-size: 1.4rem;
+}
+
+.author-buttons {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.author-buttons a,
+.author-buttons button {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  color: var(--secondary);
+  text-align: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

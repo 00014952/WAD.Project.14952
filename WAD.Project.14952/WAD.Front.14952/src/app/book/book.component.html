@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="book">
+    <div class="col-md-8">
+      <div class="book-info">
+        <div class="book-genre">{{ book.genre }}</div>
+        <div class="book-quantity">Quantity: {{ book.quantity }}</div>
+      </div>
+      <h3>{{ book.title }}</h3>
+
+      <p>{{ book.author?.firstName + " " + book.author?.lastName }}</p>
+      <p>{{ book.description }}</p>
+      <span class="book-price">{{ book.price }}$</span>
+      <div class="book-buttons">
+        <button (click)="deleteBook(book.id)">Delete</button>
+        <a [href]="'/edit-book/' + book.id">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>

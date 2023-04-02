@@ -1,0 +1,17 @@
+<div class="book">
+  <div class="book-image">
+    <img [src]="randomBook()" [alt]="book.title" />
+  </div>
+  <div class="book-details">
+    <div class="book-info">
+      <div class="book-genre">{{ book.genre }}</div>
+      <div class="book-quantity">Quantity: {{ book.quantity }}</div>
+    </div>
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.author.firstName + " " + book.author.lastName }}</p>
+    <div class="book-buttons">
+      <span>{{ book.price }}$</span>
+      <a class="book-button" [routerLink]="'/books/' + book.id"> Details </a>
+    </div>
+  </div>
+</div>

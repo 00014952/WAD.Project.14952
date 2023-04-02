@@ -1,0 +1,12 @@
+<div class="books container">
+  <h1>Books</h1>
+  <a routerLink="/create-book">Create New Book</a>
+  <ul *ngIf="!isBooksEmpty">
+    <li *ngFor="let book of books">
+      <app-book-item [book]="book"></app-book-item>
+    </li>
+  </ul>
+  <p *ngIf="isBooksEmpty" style="font-size: 2rem; text-align: center">
+    No books
+  </p>
+</div>

@@ -1,0 +1,12 @@
+<div class="slide" [style]="'background-image: url(' + slide.image + ')'">
+  <div class="slide-inner">
+    <div class="slide-start">Sales Start</div>
+    <h2>{{ slide.title }}</h2>
+    <p>{{ slide.description }}</p>
+    <a class="slide-details" routerLink="/books">Details</a>
+    <div class="slide-buttons">
+      <button class="slide-button" (click)="prevSlide()"><</button>
+      <button class="slide-button" (click)="nextSlide()">></button>
+    </div>
+  </div>
+</div>
